@@ -1,8 +1,3 @@
-az login
-
-
-$subscription="753e7697-6f11-4aed-9eac-7e2488910de7"
-az account set -s $subscription
 
 az group create `
 --name rgWebappScript `
