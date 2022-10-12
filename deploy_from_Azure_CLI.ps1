@@ -53,7 +53,7 @@ az network nsg rule create  --resource-group rgWebappScript --nsg-name nsgWebapp
     --access Allow `
     --protocol tcp `
     --direction Inbound `
-    --source-address-prefix "188.163.37.169" `
+    --source-address-prefix "$MY_IP" `
     --source-port-ranges "*" `
     --destination-address-prefix "*" `
     --destination-port-range "80" `
@@ -64,7 +64,7 @@ az network nsg rule create  --resource-group rg-webapp-script09 --nsg-name nsg-w
     --access Allow `
     --protocol tcp `
     --direction Inbound `
-    --source-address-prefix "188.163.37.169" `
+    --source-address-prefix "$MY_IP" `
     --source-port-ranges "*" `
     --destination-address-prefix "*" `
     --destination-port-range "22" `
