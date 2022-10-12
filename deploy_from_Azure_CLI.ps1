@@ -94,7 +94,7 @@ foreach($i in $no_Of_VM ){
     --nics nicWebappScript$i `
     --image Debian `
     --size Standard_B1ls `
-    --admin-username akoret `
+    --admin-username $user `
     --ssh-key-values "ssh-rsa $sshKey" `
     --zone $i
 
@@ -102,5 +102,5 @@ foreach($i in $no_Of_VM ){
     --resource-group rgWebappScript `
     --name vmWebappScript$i `
     --command-id RunShellScript `
-    --scripts "sudo apt-get update && sudo apt-get install -y nginx && sudo apt install git -y && git clone https://github.com/lerna/website.git /home/akoret/webapp && cp -a /home/akoret/webapp/. /var/www/html/ && sed 's/Documentation | Lerna/vmwebapp0$i-script07/' /var/www/html/index.html  > /var/www/index.html && rm /var/www//html/index.html && cp /var/www/index.html /var/www/html/index.html && rm /var/www/html/index.nginx-debian.html"
+    --scripts "sudo apt-get update && sudo apt-get install -y nginx && sudo apt install git -y && git clone https://github.com/lerna/website.git /home/$user/webapp && cp -a /home/$user/webapp/. /var/www/html/ && sed 's/Documentation | Lerna/vmwebapp0$i-script07/' /var/www/html/index.html  > /var/www/index.html && rm /var/www//html/index.html && cp /var/www/index.html /var/www/html/index.html && rm /var/www/html/index.nginx-debian.html"
 }
