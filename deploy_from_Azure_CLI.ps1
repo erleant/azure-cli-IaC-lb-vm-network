@@ -95,7 +95,7 @@ foreach($i in $no_Of_VM ){
     --image Debian `
     --size Standard_B1ls `
     --admin-username akoret `
-    --ssh-key-values "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCfbdKVjmFOf9TJ6Ubd5qPAMYzG0tA6Ut5FnHEvESKtWUAxCBigqrih/FmFQ9CbrvEHHTK424RbMjDcXseQsH7VtVsVTP2OV12pBv02gDDDYEpMzGRkI3/mIXwhm1BnuZ9k+OU39jhG9ktt094Kgz93Y58PJxG1PSac2opGH8PJ8c9pW3DS5WdAW3zESy5by52YKa/c4grM2qW461OeEWy4b5CqK940q28Lx5PfZXiKwMi2zp2Ab77EXxsFV3wfRT/7gXulmPXWXsSW/Ij3mAKT0bz7yNb1iO12cI6KpBnw1FVakhZzU4Z98CXgfvpqKtCBSaiRG9RDHcBijbYo2VGlrCmhhkD+yC779QXrkZ6QluFnEWYk5ZruoCYMSp+2joR1S4x1aSUpEVcPrEAQzg75F5Dn2LxP4K7nQn5hXPY6leO3gtkN4Dab+6zz4IoJkguvTyf1zv8g7nHT1YjDKweaZk0YPTiWDZh402EHMablYyCcHty/vL6Vv+kTNSHJjLHnBu+cUUoIgRi1o4c+sySxvePPLAeQaJDO/KlfKYnL/yXDk/dcLqojwMAamNU7GPBHL6sJU6vNvqHz8ERH8FWXVNmam6AeU3miEFuYSA23JxDpxpR6x0aejP7oi+K/d5GyLBcxtencJ8AIM0f03IR32iPRy+DHp5ukYJkrWHhu7Q== epam\andrii_korets@EPUALVIW0A7B" `
+    --ssh-key-values "ssh-rsa $sshKey" `
     --zone $i
 
   az vm run-command invoke `
